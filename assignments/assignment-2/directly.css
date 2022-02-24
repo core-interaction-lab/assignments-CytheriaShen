@@ -1,0 +1,35 @@
+html{
+    background-color: black;
+}
+.menu a{
+    text-decoration: none;
+    color: white;
+    align-items: top;
+    margin-top: 0%;
+    font-family: 'Comfortaa', cursive;
+    font-size: 36pt;
+    position: sticky;
+}
+
+li{
+    display: inline;
+    padding-top: 0ch;
+    text-align: left;
+    white-space: nowrap;
+}
+
+h1{
+    font-family: 'Comfortaa', cursive;
+    font-size: 24pt;
+    color: white;
+    text-align: left;
+    margin-top: 200px;
+    display: flex;
+    position: sticky;
+}
+
+p{
+    font-family: 'Comfortaa', cursive;
+    font-size: 18pt;
+    color: white;
+}

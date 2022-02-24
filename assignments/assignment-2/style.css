@@ -1,0 +1,108 @@
+*,*::after,*::before
+{
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing:border-box;
+box-sizing: border-box;
+}
+
+p
+{
+    font-family: 'Comfortaa', cursive;
+    font-size: 16px;
+    margin: 150px;
+    background: white;
+    color:black;
+    display: flex;
+    min-height: 100vh;
+    text-align: justify;
+    text-indent: 50px;
+
+}
+
+h1
+{
+    font-family: 'Comfortaa', cursive;
+    text-align: right;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    line-height: 300px;
+    margin: 150px;
+}
+
+.text-box
+{
+    font-size: 150px;
+    font-weight: 900;
+    text-align: center;
+    width: 100%;
+}
+
+.fixed-text
+{
+    display: inline-block;
+}
+
+.animated-text
+{
+    display: inline-block;
+}
+
+.animated-text span
+{
+    position: relative;
+    color: black;
+    display: block;
+    padding-top: 200px;
+    line-height: 400px;
+    font-family: 'Comfortaa', cursive;
+}
+
+.animated-text span::after
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 60%;
+    border-left: 2px solid black;
+    right: -2px;
+    background-color:white;
+    animation: 3s texttype;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(13);
+    animation-fill-mode: backwards;
+}
+
+@keyframes texttype
+{
+    0%{
+        left: 0;
+    }
+    50%{
+        left: 100%;
+    }
+    0%{
+        left: 100%;
+    }
+}
+
+
+#icon
+{
+    width: 60px;
+    cursor: pointer;
+    align-self: right;
+    margin-top: 10px;
+}
+
+a 
+{
+    text-decoration: none;
+    color: black;
+    font-family: 'Comfortaa', cursive;
+    size: 16px;
+    align-content: center;
+    margin: 150px;
+    
+}
+
