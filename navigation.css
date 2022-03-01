@@ -1,0 +1,301 @@
+body{ 
+    margin: 0;
+    background-color: black;
+}
+
+#mySidenav a {
+  position: absolute;
+  left: -90px;
+  transition: 0.3s;
+  padding: 5px;
+  margin-top: 30px;
+  width: 300px;
+  text-decoration: none;
+  font-size: 40px;
+  color: black;
+  height: 300px;
+  border-radius: 50%;
+  font-family: 'Comfortaa', cursive;
+  text-align: left;
+  text-overflow: ellipsis;
+}
+
+#mySidenav a:hover {
+  left: 0;
+}
+
+#questionmark {
+  top: 0px;
+  background-color: #f03a6d;
+}
+
+#exclamationmark {
+  top: 100px;
+  background-color: #a5c4ee;
+}
+
+#quotationmark {
+  top: 200px;
+  background-color: #3b74f6;
+}
+
+#apostrophemark {
+  top: 300px;
+  background-color: #e5fc75;
+}
+
+#period {
+    top: 400px;
+    background-color: #bf1919;
+  }
+
+#comma {
+    top: 500px;
+    background-color: #fef55e;
+}
+
+#semicolons {
+    top: 600px;
+    background-color: #8b80c3;
+}
+
+#colons {
+    top: 700px;
+    background-color: #ffd2c1;
+  }
+
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container a {
+    text-decoration: none;
+    color: beige;
+    font-family: 'Comfortaa', cursive;
+    font-size: 100pt;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    border-left: 20px solid beige;
+    border-bottom: 20px solid beige;
+    margin-left: 200px;
+}
+
+h1 {
+    width: 33%;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.3;
+}
+
+#heading-1 {
+    padding-left: 50px;
+    font-size: 250pt;
+    transition: 0.5s;
+ 
+}
+
+#heading-1:hover{
+    color: #f03a6d;
+    text-shadow: 
+    0 0 10px #f03a6d,
+    0 0 20px #f03a6d,
+    0 0 40px #f03a6d,
+    0 0 80px #f03a6d,
+    0 0 120px #f03a6d,
+    0 0 160px #f03a6d;
+}
+
+#heading-2 {
+    padding-left: 50px;
+    font-size: 250pt;
+    padding-top: 200px;
+    transition: 0.5s;
+
+}
+
+#heading-2:hover{
+    color: #a5c4ee;
+    text-shadow: 
+    0 0 10px #a5c4ee,
+    0 0 20px #a5c4ee,
+    0 0 40px #a5c4ee,
+    0 0 80px #a5c4ee,
+    0 0 120px #a5c4ee,
+    0 0 160px #a5c4ee;
+}
+
+#heading-2:hover {
+    font-size: 300pt;
+}
+
+#heading-3 {
+    padding-left: 50px;
+    padding-top: 400px;
+    font-size: 250pt;
+    transition: 0.5s;
+ 
+}
+#heading-3:hover {
+    font-size: 300pt;
+}
+
+
+#heading-3:hover{
+    color: #3b74f6;
+    text-shadow: 
+    0 0 10px #3b74f6,
+    0 0 20px #3b74f6,
+    0 0 40px #3b74f6,
+    0 0 80px #3b74f6,
+    0 0 120px #3b74f6,
+    0 0 160px #3b74f6;
+}
+
+
+#heading-4 {
+    padding-left: 0px;
+    padding-top: 600px;
+    font-size: 250pt; 
+    transition: 0.5s;
+}
+#heading-4:hover {
+    font-size: 300pt;
+}
+
+#heading-4:hover{
+    color: #e5fc75;
+    text-shadow: 
+    0 0 10px #e5fc75,
+    0 0 20px #e5fc75,
+    0 0 40px #e5fc75,
+    0 0 80px #e5fc75,
+    0 0 120px #e5fc75,
+    0 0 160px #e5fc75;
+}
+
+#heading-5 {
+    padding-left: 0px;
+    padding-top: 600px;
+    font-size: 250pt;
+    transition: 0.5s;
+}
+
+#heading-5:hover {
+    font-size: 300pt;
+}
+
+
+#heading-5:hover{
+    color: #bf1919;
+    text-shadow: 
+    0 0 10px #bf1919,
+    0 0 20px #bf1919,
+    0 0 40px #bf1919,
+    0 0 80px #bf1919,
+    0 0 120px #bf1919,
+    0 0 160px #bf1919;
+}
+
+
+
+
+#heading-6 {
+    padding-left: 100px;
+    padding-top: 600px;
+    font-size: 250pt;
+    transition: 0.5s;
+
+}
+
+#heading-6:hover {
+    font-size: 300pt;
+}
+
+#heading-6:hover{
+    color: #fef55e;
+    text-shadow: 
+    0 0 10px #fef55e,
+    0 0 20px #fef55e,
+    0 0 40px #fef55e,
+    0 0 80px #fef55e,
+    0 0 120px #fef55e,
+    0 0 160px #fef55e;
+}
+
+
+#heading-7 {
+    padding-left: 100px;
+    padding-top: 600px;
+    font-size: 250pt;
+    transition: 0.5s;
+
+}
+
+#heading-7:hover {
+    font-size: 300pt;
+}
+#heading-7:hover{
+    color: #8b80c3;
+    text-shadow: 
+    0 0 10px #8b80c3,
+    0 0 20px #8b80c3,
+    0 0 40px #8b80c3,
+    0 0 80px #8b80c3,
+    0 0 120px #8b80c3,
+    0 0 160px #8b80c3;
+}
+
+#heading-8 {
+    padding-left: 100px;
+    padding-top: 600px;
+    font-size: 250pt;
+    transition: 0.5s;
+
+}
+#heading-8:hover {
+    font-size: 300pt;
+}
+
+#heading-8:hover{
+    color: #ffd2c1;
+    text-shadow: 
+    0 0 10px #ffd2c1,
+    0 0 20px #ffd2c1,
+    0 0 40px #ffd2c1,
+    0 0 80px #ffd2c1,
+    0 0 120px #ffd2c1,
+    0 0 160px #ffd2c1;
+}
+
+.menu a{
+    text-decoration: none;
+    color: beige;
+    margin-top: 0%;
+    font-family: 'Comfortaa', cursive;
+    font-size: 36pt;
+}
+
+li{
+    display: block;
+    padding-top: 0ch;
+}
+
+#left {
+    text-align: left;
+    
+}
+
+#right {
+    text-align: right;
+   
+}
+
