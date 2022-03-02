@@ -199,7 +199,7 @@ h1
 
  @media only screen and (max-width: 768px) {
     /* For mobile phones: */
-    [class*="col-"] {
+    [class*="right-col"] {
       width: 100%;
     }
 }
