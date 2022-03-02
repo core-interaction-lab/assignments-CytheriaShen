@@ -4,19 +4,33 @@
 -moz-box-sizing: border-box;
 -ms-box-sizing:border-box;
 box-sizing: border-box;
+background: black;
 }
+
+
+img.sticky {
+        
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 1700px;
+      }
+
 
 p
 {
     font-family: 'Comfortaa', cursive;
     font-size: 16px;
-    margin: 150px;
-    background: white;
-    color:black;
+    margin: 100px;
+    margin-bottom: 0;
+    
+    color:beige;
     display: flex;
     min-height: 100vh;
     text-align: justify;
     text-indent: 50px;
+ 
+    
 
 }
 
@@ -25,9 +39,10 @@ h1
     font-family: 'Comfortaa', cursive;
     text-align: right;
     padding-top: 50px;
-    padding-bottom: 30px;
+    padding-bottom: 0px;
     line-height: 300px;
-    margin: 150px;
+    margin: 130px;
+    color: beige;
 }
 
 .text-box
@@ -36,11 +51,14 @@ h1
     font-weight: 900;
     text-align: center;
     width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
 }
 
 .fixed-text
 {
     display: inline-block;
+    
 }
 
 .animated-text
@@ -51,7 +69,7 @@ h1
 .animated-text span
 {
     position: relative;
-    color: black;
+    color: beige;
     display: block;
     padding-top: 200px;
     line-height: 400px;
@@ -64,9 +82,10 @@ h1
     position: absolute;
     left: 0;
     height: 60%;
-    border-left: 2px solid black;
+    width: 70%;
+    border-left: 2px solid beige;
     right: -2px;
-    background-color:white;
+    background-color: black;
     animation: 3s texttype;
     animation-iteration-count: infinite;
     animation-timing-function: steps(13);
@@ -132,12 +151,14 @@ h1
     width: 200px;
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
   
-    background-image: linear-gradient(to right, #895cf2 0%, #ffabf4 50%, #895cf2 100%);
+   
     transition: 0.5s;
   }
   
   .popup .popup-button:hover {
     background-position: right center;
+    padding-top: 0px;
+    margin-top: 10px;
   }
   
   #btn-2 {
@@ -153,7 +174,7 @@ h1
         #8b80c3 170px 190px,
         #ffd2c1 190px 210px
     );
-    color: white;
+    color: beige;
     font-family: 'Comfortaa', cursive;
     font-weight: bold 700;
    
@@ -163,6 +184,16 @@ h1
     background-position: 20% center;
   }
   
- 
+ h3 {
+     position: sticky;
+     font-family: 'Comfortaa', cursive;
+     text-align: right;
+     padding-top: 50px;
+     padding-bottom: 30px;
+     line-height: 300px;
+     margin: 150px;
+     color: beige;
+
+ }
 
 
