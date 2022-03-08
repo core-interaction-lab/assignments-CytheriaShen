@@ -5,8 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quotation Mark</title>
+    <link rel="stylesheet" type="text/css" href="quotationmark.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    
 </head>
+
 <body>
+  <span style="font-size: 50px;cursor:pointer;color:black;display: flex;margin-top: 0;position: fixed;top: 40px;left: 40px;" onclick="openNav()">&#9776; </span>
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+      <a href="questionmark.html" id="questionmark">QUESTION</a>
+      <a href="exclamationmark.html" id="exclamationmark"> EXCLAMATION</a>
+      <a href="quotationmark.css" id="quotationmark"> QUOTATION </a>
+      <a href="apostrophemark.html" id="apostrophemark"> APOSTROPHE</a>
+      <a href="period.html" id="period"> PERIOD</a>
+      <a href="colons.html" id="comma">COLONS</a>
+      <a href="semicolons.html" id="semicolons"> SEMI-COLONS</a>
+      <a href="comma.html" id="colons"> COMMA</a>
+  </div>
+</div>
+<p>
+  The same thing is true of a quotation. When I first began writing I found it simply impossible to use question marks and quotation 
+  marks and exclamation points and now anybody sees it that way. Perhaps some day they will 
+  see it some other way but not at any rate anybody can and does see it that way.
+
+So there are the uninteresting things in punctuation uninteresting in a way that is perfectly obvious,
+ and so we do not have to go any farther into that. There are besides dashes and dots, and these might be interesting 
+ spaces might be interesting. They might if one felt that way about them. 
+
+</p>
+
+<div class="container" style="margin-top:500px;margin-left: 20px; margin-right: 20px;">
+<div class="popup">
+  <div class="popup-content">
+    <div style="display: flex;flex-direction: column;justify-content: center;">
+        <a href="exclamationmark.html" id="left" class="button">←</a></div>
+    <div><a href="apostrophemark.html" id="btn-2" class="popup-button" style="margin-left:0px;">?</a></div>       
+  </div>  
+</div>  
+</div>
+
+
+
+
+
+
+
+    
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+  }
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+
+
+
     
 </body>
 </html>

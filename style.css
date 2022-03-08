@@ -20,20 +20,21 @@ img.sticky {
 p
 {
     font-family: 'Comfortaa', cursive;
-    font-size: 16px;
-    margin: 100px;
+    font-size: px;
+    margin: 200px;
     margin-bottom: 0;
-    
+    line-height: 28px;
     color:beige;
     display: flex;
-    min-height: 100vh;
     text-align: justify;
     text-indent: 50px;
  
-    
-
 }
 
+.right-col {
+    text-align: right;
+    margin: 200px;
+}
 h1
 {
     font-family: 'Comfortaa', cursive;
@@ -43,6 +44,7 @@ h1
     line-height: 300px;
     margin: 130px;
     color: beige;
+    margin: 200px;
 }
 
 .text-box
@@ -141,12 +143,12 @@ h1
     font-weight: 800;
     font-size: 1em;
     text-transform: uppercase;
-    color: #fff;
+    color: beige;
     border-radius: 50%;
     margin: 10px;
     padding: 1em 3em;
     background-size: 300% 300%;
-    color: white;
+    color: beige;
     height: 200px;
     width: 200px;
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
@@ -193,6 +195,7 @@ h1
      line-height: 300px;
      margin: 150px;
      color: beige;
+     margin: 200px;
 
  }
 

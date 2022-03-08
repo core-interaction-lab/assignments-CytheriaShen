@@ -1,0 +1,31 @@
+
+
+span {
+  padding: 10px;
+}
+
+.flex-row {
+  display: flex;
+}
+#element1 .card {
+float:left;
+align-items: center;
+
+
+margin-left: 10%;
+display: flex;
+
+flex-direction: column;
+}
+
+#element2 {
+padding-left: 40px;
+float:left;
+font-family: 'Comfortaa', cursive; 
+color: beige;
+font-size: 18px;
+line-height: 28px;
+padding: 15%;
+text-align: justify;
+
+}

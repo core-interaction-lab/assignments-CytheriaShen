@@ -12,9 +12,58 @@
     
 </head>
 <body>
-    <p>
-        A question is a question, anybody can know that a question is a question and so why add to it the question mark when it is already there when the question is already there in the writing. Therefore I never could bring myself to use a question mark, I always found it positively revolting, and now very few do use it. 
+  <img class="sticky" src="question.gif" alt="punctuations" style="
+  margin-left: 100px;
+  max-width: 1500px;
+">
+<span style="font-size: 50px;cursor:pointer;color:beige;display: flex;margin-top: 0;position: fixed;top: 40px;left: 40px;" onclick="openNav()">&#9776; </span>
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+        <a href="questionmark.html" id="questionmark">QUESTION</a>
+        <a href="exclamationmark.html" id="exclamationmark"> EXCLAMATION</a>
+        <a href="quotationmark.css" id="quotationmark"> QUOTATION </a>
+        <a href="apostrophemark.html" id="apostrophemark"> APOSTROPHE</a>
+        <a href="period.html" id="period"> PERIOD</a>
+        <a href="colons.html" id="colons">COLONS</a>
+        <a href="semicolons.html" id="semicolons"> SEMI-COLONS</a>
+        <a href="comma.html" id="comma"> COMMA</a>
+    </div>
+  </div>
 
-    </p>
+ <div id="root">
+     <div class="flex-row">
+        <div id="element1">
+            ?
+         </div>
+         <div id="element2">
+            A question  is a question, anybody can know that a question is a question and so why add 
+            to it the question mark when it is already there when the question is already there in the writing.
+        </div>
+     </div>
+ </div>
+
+ <div class="container">
+  <div class="popup">
+    <div class="popup-content">
+      <div style="display: flex;flex-direction: column;justify-content: center;">
+          <a href="navigation.html" id="left" class="button">←</a></div>
+      <div><a href="exclamationmark.html" id="btn-2" class="popup-button" style="margin-left:0px;"></a></div>       
+    </div>  
+  </div>  
+</div>
+
+      
+<script>
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+    }
+
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+</script>
+
+    
 </body>
 </html>

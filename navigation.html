@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation Page</title>
     <link rel="stylesheet" type="text/css" href="navigation.css">
@@ -12,20 +10,24 @@
     
 </head>
 <body>
-        <h3 contenteditable="true">Navigation Bar  </h3>
+        <h3 contenteditable="true">  </h3>
  
-   
- 
-<div id="mySidenav" class="sidenav">
-        <a href="questionmark.h" id="questionmark">(1) ?</a>
-        <a href="exclamationmark.html" id="exclamationmark">(2) !</a>
-        <a href="quotationmark.html" id="quotationmark">(3) ""</a>
-        <a href="apostrophemark.html" id="apostrophemark">(4) '</a>
-        <a href="period.html" id="period">(5) .</a>
-        <a href="colons.html" id="comma">(6) :</a>
-        <a href="semicolons.html" id="semicolons">(7) ;</a>
-        <a href="comma.html" id="colons">(8) ,</a>
-</div>
+        <span style="font-size: 50px;cursor:pointer;color:beige;display: flex;margin-top: 0;position: fixed;top: 40px;left: 40px;" onclick="openNav()">&#9776; </span>
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="questionmark.html" id="questionmark">QUESTION</a>
+                <a href="exclamationmark.html" id="exclamationmark"> EXCLAMATION</a>
+                <a href="quotationmark.css" id="quotationmark"> QUOTATION </a>
+                <a href="apostrophemark.html" id="apostrophemark"> APOSTROPHE</a>
+                <a href="period.html" id="period"> PERIOD</a>
+                <a href="colons.html" id="comma">COLONS</a>
+                <a href="semicolons.html" id="semicolons"> SEMI-COLONS</a>
+                <a href="comma.html" id="colons"> COMMA</a>
+            </div>
+          </div>
+        
+         
     
     <div class="container">
         <div class="wrapper">
@@ -50,12 +52,12 @@
             <h1 id="heading-5">.</h1>
         </a>
 
-        <a href="semicolons.html" class="previous">
-            <h1 id="heading-6">;</h1>
+        <a href="colons.html" class="previous">
+            <h1 id="heading-6">:</h1>
         </a>
 
-        <a href="colons.html" class="previous">
-            <h1 id="heading-7">:</h1>
+        <a href="semicolons.html" class="previous">
+            <h1 id="heading-7">;</h1>
         </a>
 
         <a href="comma.html" class="previous">
@@ -68,20 +70,34 @@
 
 <nav class="menu">
     
-    <ul>
-        <li><a href="index.html">
+    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+        <div style="display: flex; flex-direction: column; justify-content: center;">
+            <a href="index.html">
                 <h2 id="left">←</h2>
            </a>
-        </li>
+        </div>
 
-        <li><a href="questionmark.html">
-                <h2 id="right">→</h2>
-       </a>
-    </li>
+        <div style="display: flex; flex-direction: column; justify-content: center;">
+            <a href="questionmark.html">
+                <h2 id="right">→</h2> 
+            </a>
+        </div>
+    </div>
       
     
     </ul>
   </nav>
+
+      
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+      }
+  
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+  </script>
 
 
 </body>

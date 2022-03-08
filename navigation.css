@@ -3,67 +3,6 @@ body{
     background-color: black;
 }
 
-#mySidenav a {
-  position: absolute;
-  left: -90px;
-  transition: 0.3s;
-  padding: 5px;
-  margin-top: 200px;
-  width: 300px;
-  text-decoration: none;
-  font-size: 40px;
-  color: black;
-  height: 300px;
-  border-radius: 50%;
-  font-family: 'Comfortaa', cursive;
-  text-align: left;
-  text-overflow: ellipsis;
-
-}
-
-#mySidenav a:hover {
-  left: 0;
-}
-
-#questionmark {
-  top: 0px;
-  background-color: #f03a6d;
-}
-
-#exclamationmark {
-  top: 100px;
-  background-color: #a5c4ee;
-}
-
-#quotationmark {
-  top: 200px;
-  background-color: #3b74f6;
-}
-
-#apostrophemark {
-  top: 300px;
-  background-color: #e5fc75;
-}
-
-#period {
-    top: 400px;
-    background-color: #bf1919;
-  }
-
-#comma {
-    top: 500px;
-    background-color: #fef55e;
-}
-
-#semicolons {
-    top: 600px;
-    background-color: #8b80c3;
-}
-
-#colons {
-    top: 700px;
-    background-color: #ffd2c1;
-  }
 
 
 .container{
@@ -90,7 +29,8 @@ body{
     flex-wrap: wrap;
     border-left: 20px solid beige;
     border-bottom: 20px solid beige;
-    margin-left: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1 {
@@ -296,7 +236,6 @@ li{
 
 #left {
     text-align: left;
-    padding-top: 100px;
     padding-left: 0px;
     
 }
@@ -316,4 +255,241 @@ h3 {
     font-size: 30pt;
 }
 
-
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    margin-top: 0;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 18%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: beige;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: beige;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  #questionmark {
+    top: 0px;
+    transition: 0.5s;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Comfortaa', cursive;
+  }
+  
+  #questionmark:hover{
+    color: #f03a6d;
+    text-shadow: 
+    0 0 10px #f03a6d,
+    0 0 20px #f03a6d,
+    0 0 40px #f03a6d,
+    0 0 80px #f03a6d,
+    0 0 120px #f03a6d,
+    0 0 160px #f03a6d;
+    color: #f03a6d;
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    font-size: 80pt;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  
+  #exclamationmark {
+    top: 100px;
+    transition: 0.5s;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Comfortaa', cursive;
+  }
+  
+  #exclamationmark:hover{
+    color: #a5c4ee;
+    text-shadow: 
+    0 0 10px #a5c4ee,
+    0 0 20px #a5c4ee,
+    0 0 40px #a5c4ee,
+    0 0 80px #a5c4ee,
+    0 0 120px #a5c4ee,
+    0 0 160px #a5c4ee;
+    font-size: 30pt;
+    color: #a5c4ee;
+    text-align: center;
+    font-size: 80pt;
+    font-family: 'Comfortaa', cursive;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  #quotationmark {
+    top: 50%;
+    transition: 0.5s;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Comfortaa', cursive;
+  }
+  
+  
+  #quotationmark:hover{
+    color: #3b74f6;
+    text-shadow: 
+    0 0 10px #3b74f6,
+    0 0 20px #3b74f6,
+    0 0 40px #3b74f6,
+    0 0 80px #3b74f6,
+    0 0 120px #3b74f6,
+    0 0 160px #3b74f6;
+    color:#3b74f6;
+    text-align: center;
+    font-size: 80pt;
+    font-family: 'Comfortaa', cursive;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  
+  #apostrophemark {
+    top: 300px;
+    transition: 0.5s;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Comfortaa', cursive;
+  }
+  
+  #apostrophemark:hover{
+    color: #e5fc75;
+    text-shadow: 
+    0 0 10px #e5fc75,
+    0 0 20px #e5fc75,
+    0 0 40px #e5fc75,
+    0 0 80px #e5fc75,
+    0 0 120px #e5fc75,
+    0 0 160px #e5fc75;
+    color: #e5fc75;
+    text-align: center;
+    font-size: 80pt;
+    font-family: 'Comfortaa', cursive;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  
+  #period {
+      top: 400px;
+      transition: 0.5s;
+      text-align: center;
+      font-size: 50px;
+      font-family: 'Comfortaa', cursive;
+    }
+  
+  #period:hover{
+        color: #bf1919;
+        text-shadow: 
+        0 0 10px #bf1919,
+        0 0 20px #bf1919,
+        0 0 40px #bf1919,
+        0 0 80px #bf1919,
+        0 0 120px #bf1919,
+        0 0 160px #bf1919;
+        color: #bf1919;
+        text-align: center;
+        font-size: 80pt;
+        font-family: 'Comfortaa', cursive;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+  
+  #comma {
+      top: 500px;
+      transition: 0.5s;
+      text-align: center;
+      font-size: 50px;
+      font-family: 'Comfortaa', cursive;
+  }
+  
+  #comma:hover{
+    color: #fef55e;
+    text-shadow: 
+    0 0 10px #fef55e,
+    0 0 20px #fef55e,
+    0 0 40px #fef55e,
+    0 0 80px #fef55e,
+    0 0 120px #fef55e,
+    0 0 160px #fef55e;
+    color: #fef55e;
+    text-align: center;
+    font-size: 80pt;
+    font-family: 'Comfortaa', cursive;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  #semicolons {
+      top: 600px;
+      transition: 0.5s;
+      text-align: center;
+      font-size: 50px;
+      font-family: 'Comfortaa', cursive;
+  }
+  
+  #semicolons:hover{
+    color: #8b80c3;
+    text-shadow: 
+    0 0 10px #8b80c3,
+    0 0 20px #8b80c3,
+    0 0 40px #8b80c3,
+    0 0 80px #8b80c3,
+    0 0 120px #8b80c3,
+    0 0 160px #8b80c3;
+    color: #8b80c3;
+    text-align: center;
+    font-size: 80pt;
+    font-family: 'Comfortaa', cursive;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  
+  #colons {
+      top: 700px;
+      transition: 0.5s;
+      text-align: center;
+      font-size: 50px;
+      font-family: 'Comfortaa', cursive;
+    }
+    #colons:hover{
+        color: #ffd2c1;
+        text-shadow: 
+        0 0 10px #ffd2c1,
+        0 0 20px #ffd2c1,
+        0 0 40px #ffd2c1,
+        0 0 80px #ffd2c1,
+        0 0 120px #ffd2c1,
+        0 0 160px #ffd2c1;
+        font-size: 80pt;
+        color: #ffd2c1;
+        text-align: center;
+        font-family: 'Comfortaa', cursive;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+   
