@@ -11,20 +11,25 @@ body {
   background: #8b80c3;
 }
 
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14vh;
+}
+
 p {
   font-family: 'Comfortaa', cursive;
   color: beige;
-  width: 40%;
+  width: 45%;
   align-items: center;
   font-size: 18px;
   line-height: 28px;
   text-align: justify;
-  margin-left: 800px;
-  margin-top: 400px;
+  /* margin-left: 800px;
+  margin-top: 400px; */
   padding-top:0;
-
-  
-
+  margin-right: 1vw;
 }
 
 .text {
@@ -170,6 +175,30 @@ margin-right: auto;
   font-size: 60px;
 }
 
+#homepage {
+  top: 0px;
+  transition: 0.5s;
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Comfortaa', cursive;
+}
+
+#homepage:hover{
+  color: beige;
+  text-shadow: 
+  0 0 10px beige,
+  0 0 20px beige,
+  0 0 40px beige,
+  0 0 80px  beige,
+  0 0 120px beige,
+  0 0 160px beige;
+  color: beige;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+  font-size: 80pt;
+
+}
+
 #questionmark {
   top: 0px;
   transition: 0.5s;
@@ -191,7 +220,7 @@ margin-right: auto;
   text-align: center;
   font-family: 'Comfortaa', cursive;
   font-size: 80pt;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  
 }
 
 
@@ -217,7 +246,7 @@ margin-right: auto;
   text-align: center;
   font-size: 80pt;
   font-family: 'Comfortaa', cursive;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ 
 }
 
 #quotationmark {
@@ -242,7 +271,7 @@ margin-right: auto;
   text-align: center;
   font-size: 80pt;
   font-family: 'Comfortaa', cursive;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  
 }
 
 
@@ -267,7 +296,7 @@ margin-right: auto;
   text-align: center;
   font-size: 80pt;
   font-family: 'Comfortaa', cursive;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ 
 }
 
 
@@ -292,7 +321,7 @@ margin-right: auto;
       text-align: center;
       font-size: 80pt;
       font-family: 'Comfortaa', cursive;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+     
   }
 
 #semicolons {
@@ -316,7 +345,7 @@ margin-right: auto;
   text-align: center;
   font-size: 80pt;
   font-family: 'Comfortaa', cursive;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ 
 }
 #colons {
     top: 600px;
@@ -339,7 +368,7 @@ margin-right: auto;
   text-align: center;
   font-size: 80pt;
   font-family: 'Comfortaa', cursive;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ 
 }
 
 
@@ -363,15 +392,16 @@ margin-right: auto;
       color: #ffd2c1;
       text-align: center;
       font-family: 'Comfortaa', cursive;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+     
   }
- 
-  .card {
-    width: 10px;
-    
-    position: relative;
+ .card {
+    position: sticky;
     display: inline-block;
     margin: 50px;
+    width: 36%;
+  }
+  .card img {
+    width: 100%;
   }
   .card .img-top {
     display: none;
@@ -383,3 +413,30 @@ margin-right: auto;
   .card:hover .img-top {
     display: inline;
   }
+
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+  
+    /* [class*="card"] {
+        width: 60%;
+        height: 60%;
+      }
+     */
+
+     .content {
+       display: block;
+     }
+     .card {
+       margin: 10%;
+       width: 80%;
+     }
+     p {
+       width: 80%;
+       margin: 0 10%;
+     }
+      img {
+        width: 50%;
+      }
+      
+      
+}

@@ -1,20 +1,21 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:  'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
 }
 
 body {
   background: #3b74f6;
   background-image: url("quotationbackground-01.png");
+  background-repeat: no-repeat;
   position: flex;
-  
+
   background-size: 100%;
 }
 
 p {
-  font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
   color: beige;
   width: 40%;
   align-items: center;
@@ -22,27 +23,21 @@ p {
   line-height: 28px;
   text-align: justify;
   margin-left: 300px;
-  
+
   margin-top: 500px;
-  padding-top:0;
-
-  
-
+  padding-top: 0;
 }
 
 .text {
-margin-left: auto;
-margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-
 
 .popup .popup-content {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: row;
-  
 }
 
 .popup .popup-button {
@@ -61,7 +56,12 @@ margin-right: auto;
   background-size: 300% 300%;
   color: beige;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-  background-image: linear-gradient(to right, #3b7dda 0%, #a5c4ee 50%, #b5d4ff 100%);
+  background-image: linear-gradient(
+    to right,
+    #3b7dda 0%,
+    #a5c4ee 50%,
+    #b5d4ff 100%
+  );
   transition: 0.5s;
 }
 
@@ -85,55 +85,48 @@ margin-right: auto;
   
 } */
 
+.container li {
+  display: inline-block;
+  -webkit-display: box;
+  -moz-display: box;
+  -ms-display: flexbox;
+  -webkit-display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 0px;
+}
 
-  .container li {
-    display: inline-block;
-    -webkit-display: box;
-    -moz-display: box;
-    -ms-display: flexbox;
-    -webkit-display: flex;
-    flex-wrap: wrap;
-    padding-bottom: 0px;
-   
-  }
-  
-  .popup .popup-button:hover {
-    background-position: right;
-    
-  
-  }
-  
-  #btn-2 {
-      background-image: repeating-linear-gradient(-45deg, 
-       rgb(245, 245, 220) 10px 30px,
-       #e5fc75 30px 50px,
-        beige 50px 70px,
-        #e5fc75 70px 90px,
-        beige 90px 110px,
-        #e5fc75 110px 130px,
-        beige 130px 150px,
-        #e5fc75 150px 170px,
-        beige 170px 190px,
-        #e5fc75 190px 210px
-    );
-    color: #e5fc75;
-     
-        font-family: 'Comfortaa', cursive;
-        
-        text-align: center;
-        display: inline-block;
+.popup .popup-button:hover {
+  background-position: right;
+}
 
+#btn-2 {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgb(245, 245, 220) 10px 30px,
+    #e5fc75 30px 50px,
+    beige 50px 70px,
+    #e5fc75 70px 90px,
+    beige 90px 110px,
+    #e5fc75 110px 130px,
+    beige 130px 150px,
+    #e5fc75 150px 170px,
+    beige 170px 190px,
+    #e5fc75 190px 210px
+  );
+  color: #e5fc75;
 
-    margin-left: 80%;
-   
-  }
-  
-  #btn-2:hover {
-    background-position: 20% center;
-    margin-bottom: 0px;
-  }
+  font-family: "Comfortaa", cursive;
 
+  text-align: center;
+  display: inline-block;
 
+  margin-left: 80%;
+}
+
+#btn-2:hover {
+  background-position: 20% center;
+  margin-bottom: 0px;
+}
 
 #left {
   text-decoration: none;
@@ -141,9 +134,7 @@ margin-right: auto;
   color: #a5c4ee;
   text-align: left;
   margin-left: 5%;
-
 }
-
 
 .overlay {
   height: 100%;
@@ -153,11 +144,10 @@ margin-right: auto;
   margin-top: 0;
   top: 0;
   left: 0;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.8);
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.8);
   overflow-x: hidden;
   transition: 0.5s;
-  
 }
 
 .overlay-content {
@@ -177,7 +167,8 @@ margin-right: auto;
   transition: 0.3s;
 }
 
-.overlay a:hover, .overlay a:focus {
+.overlay a:hover,
+.overlay a:focus {
   color: beige;
 }
 
@@ -188,54 +179,59 @@ margin-right: auto;
   font-size: 60px;
 }
 
+#homepage {
+  top: 0px;
+  transition: 0.5s;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Comfortaa", cursive;
+}
+
+#homepage:hover {
+  color: beige;
+  text-shadow: 0 0 10px beige, 0 0 20px beige, 0 0 40px beige, 0 0 80px beige,
+    0 0 120px beige, 0 0 160px beige;
+  color: beige;
+  text-align: center;
+  font-family: "Comfortaa", cursive;
+  font-size: 80pt;
+}
+
 #questionmark {
   top: 0px;
   transition: 0.5s;
   text-align: center;
   font-size: 50px;
-  font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
 }
 
-#questionmark:hover{
+#questionmark:hover {
   color: #f03a6d;
-  text-shadow: 
-  0 0 10px #f03a6d,
-  0 0 20px #f03a6d,
-  0 0 40px #f03a6d,
-  0 0 80px #f03a6d,
-  0 0 120px #f03a6d,
-  0 0 160px #f03a6d;
+  text-shadow: 0 0 10px #f03a6d, 0 0 20px #f03a6d, 0 0 40px #f03a6d,
+    0 0 80px #f03a6d, 0 0 120px #f03a6d, 0 0 160px #f03a6d;
   color: #f03a6d;
   text-align: center;
-  font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
   font-size: 80pt;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
-
 
 #exclamationmark {
   top: 100px;
   transition: 0.5s;
   text-align: center;
   font-size: 50px;
-  font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
 }
 
-#exclamationmark:hover{
+#exclamationmark:hover {
   color: #a5c4ee;
-  text-shadow: 
-  0 0 10px #a5c4ee,
-  0 0 20px #a5c4ee,
-  0 0 40px #a5c4ee,
-  0 0 80px #a5c4ee,
-  0 0 120px #a5c4ee,
-  0 0 160px #a5c4ee;
+  text-shadow: 0 0 10px #a5c4ee, 0 0 20px #a5c4ee, 0 0 40px #a5c4ee,
+    0 0 80px #a5c4ee, 0 0 120px #a5c4ee, 0 0 160px #a5c4ee;
   font-size: 30pt;
   color: #a5c4ee;
   text-align: center;
   font-size: 80pt;
-  font-family: 'Comfortaa', cursive;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  font-family: "Comfortaa", cursive;
 }
 
 #quotationmark {
@@ -243,144 +239,118 @@ margin-right: auto;
   transition: 0.5s;
   text-align: center;
   font-size: 50px;
-  font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
 }
 
-
-#quotationmark:hover{
+#quotationmark:hover {
   color: #3b74f6;
-  text-shadow: 
-  0 0 10px #3b74f6,
-  0 0 20px #3b74f6,
-  0 0 40px #3b74f6,
-  0 0 80px #3b74f6,
-  0 0 120px #3b74f6,
-  0 0 160px #3b74f6;
-  color:#3b74f6;
+  text-shadow: 0 0 10px #3b74f6, 0 0 20px #3b74f6, 0 0 40px #3b74f6,
+    0 0 80px #3b74f6, 0 0 120px #3b74f6, 0 0 160px #3b74f6;
+  color: #3b74f6;
   text-align: center;
   font-size: 80pt;
-  font-family: 'Comfortaa', cursive;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  font-family: "Comfortaa", cursive;
 }
-
 
 #apostrophemark {
   top: 300px;
   transition: 0.5s;
   text-align: center;
   font-size: 50px;
-  font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
 }
 
-#apostrophemark:hover{
+#apostrophemark:hover {
   color: #e5fc75;
-  text-shadow: 
-  0 0 10px #e5fc75,
-  0 0 20px #e5fc75,
-  0 0 40px #e5fc75,
-  0 0 80px #e5fc75,
-  0 0 120px #e5fc75,
-  0 0 160px #e5fc75;
+  text-shadow: 0 0 10px #e5fc75, 0 0 20px #e5fc75, 0 0 40px #e5fc75,
+    0 0 80px #e5fc75, 0 0 120px #e5fc75, 0 0 160px #e5fc75;
   color: #e5fc75;
   text-align: center;
   font-size: 80pt;
-  font-family: 'Comfortaa', cursive;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  font-family: "Comfortaa", cursive;
 }
-
 
 #period {
-    top: 400px;
-    transition: 0.5s;
-    text-align: center;
-    font-size: 50px;
-    font-family: 'Comfortaa', cursive;
-  }
+  top: 400px;
+  transition: 0.5s;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Comfortaa", cursive;
+}
 
-#period:hover{
-      color: #bf1919;
-      text-shadow: 
-      0 0 10px #bf1919,
-      0 0 20px #bf1919,
-      0 0 40px #bf1919,
-      0 0 80px #bf1919,
-      0 0 120px #bf1919,
-      0 0 160px #bf1919;
-      color: #bf1919;
-      text-align: center;
-      font-size: 80pt;
-      font-family: 'Comfortaa', cursive;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  }
+#period:hover {
+  color: #bf1919;
+  text-shadow: 0 0 10px #bf1919, 0 0 20px #bf1919, 0 0 40px #bf1919,
+    0 0 80px #bf1919, 0 0 120px #bf1919, 0 0 160px #bf1919;
+  color: #bf1919;
+  text-align: center;
+  font-size: 80pt;
+  font-family: "Comfortaa", cursive;
+}
 
 #comma {
-    top: 500px;
-    transition: 0.5s;
-    text-align: center;
-    font-size: 50px;
-    font-family: 'Comfortaa', cursive;
+  top: 500px;
+  transition: 0.5s;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Comfortaa", cursive;
 }
 
-#comma:hover{
+#comma:hover {
   color: #fef55e;
-  text-shadow: 
-  0 0 10px #fef55e,
-  0 0 20px #fef55e,
-  0 0 40px #fef55e,
-  0 0 80px #fef55e,
-  0 0 120px #fef55e,
-  0 0 160px #fef55e;
+  text-shadow: 0 0 10px #fef55e, 0 0 20px #fef55e, 0 0 40px #fef55e,
+    0 0 80px #fef55e, 0 0 120px #fef55e, 0 0 160px #fef55e;
   color: #fef55e;
   text-align: center;
   font-size: 80pt;
-  font-family: 'Comfortaa', cursive;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  font-family: "Comfortaa", cursive;
 }
 #semicolons {
-    top: 600px;
-    transition: 0.5s;
-    text-align: center;
-    font-size: 50px;
-    font-family: 'Comfortaa', cursive;
+  top: 600px;
+  transition: 0.5s;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Comfortaa", cursive;
 }
 
-#semicolons:hover{
+#semicolons:hover {
   color: #8b80c3;
-  text-shadow: 
-  0 0 10px #8b80c3,
-  0 0 20px #8b80c3,
-  0 0 40px #8b80c3,
-  0 0 80px #8b80c3,
-  0 0 120px #8b80c3,
-  0 0 160px #8b80c3;
+  text-shadow: 0 0 10px #8b80c3, 0 0 20px #8b80c3, 0 0 40px #8b80c3,
+    0 0 80px #8b80c3, 0 0 120px #8b80c3, 0 0 160px #8b80c3;
   color: #8b80c3;
   text-align: center;
   font-size: 80pt;
-  font-family: 'Comfortaa', cursive;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  font-family: "Comfortaa", cursive;
 }
 
-
 #colons {
-    top: 700px;
-    transition: 0.5s;
-    text-align: center;
-    font-size: 50px;
-    font-family: 'Comfortaa', cursive;
+  top: 700px;
+  transition: 0.5s;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Comfortaa", cursive;
+}
+#colons:hover {
+  color: #ffd2c1;
+  text-shadow: 0 0 10px #ffd2c1, 0 0 20px #ffd2c1, 0 0 40px #ffd2c1,
+    0 0 80px #ffd2c1, 0 0 120px #ffd2c1, 0 0 160px #ffd2c1;
+  font-size: 80pt;
+  color: #ffd2c1;
+  text-align: center;
+  font-family: "Comfortaa", cursive;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="overlay"] {
+    width: 100%;
   }
-  #colons:hover{
-      color: #ffd2c1;
-      text-shadow: 
-      0 0 10px #ffd2c1,
-      0 0 20px #ffd2c1,
-      0 0 40px #ffd2c1,
-      0 0 80px #ffd2c1,
-      0 0 120px #ffd2c1,
-      0 0 160px #ffd2c1;
-      font-size: 80pt;
-      color: #ffd2c1;
-      text-align: center;
-      font-family: 'Comfortaa', cursive;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  [class*="container"] {
+    width: 100%;
   }
- 
+  p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+}

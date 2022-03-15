@@ -13,7 +13,7 @@ img.sticky {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    width: 1700px;
+    width: 100%;
       }
 
 
@@ -45,16 +45,19 @@ h1
     margin: 130px;
     color: beige;
     margin: 200px;
+    font-size: 2vw;
 }
 
 .text-box
 {
-    font-size: 150px;
+    font-size: 8vw;
     font-weight: 900;
     text-align: center;
     width: 100%;
     position: -webkit-sticky;
     position: sticky;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .fixed-text
@@ -107,7 +110,14 @@ h1
     }
 }
 
-
+h4 {
+    font-size: 50pt;
+    color: beige;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 #icon
 {
     width: 60px;
@@ -196,13 +206,31 @@ h1
      margin: 150px;
      color: beige;
      margin: 200px;
-
+    font-size: 1.5vw;
  }
-
 
  @media only screen and (max-width: 768px) {
     /* For mobile phones: */
+    /* [class*="sticky"] {
+        width: 100%;
+      }
+      [class*="text-box"] {
+        width: 60%;
+      }
+      [class*="animated-text"] {
+        width: 60%;
+      }
     [class*="right-col"] {
       width: 100%;
     }
+    [class*="container"] {
+        width: 100%;
+      }
+      img {
+          
+          height: 50%;
+      } */
+  h1, h3, p, .right-col {
+    margin: 10%;
+  } 
 }
