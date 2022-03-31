@@ -1,236 +1,43 @@
-*,*::after,*::before
-{
--webkit-box-sizing: border-box;
--moz-box-sizing: border-box;
--ms-box-sizing:border-box;
-box-sizing: border-box;
-background: black;
-}
-
-
-img.sticky {
-        
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    width: 100%;
-      }
-
-
-p
-{
-    font-family: 'Comfortaa', cursive;
-    font-size: px;
-    margin: 200px;
-    margin-bottom: 0;
-    line-height: 28px;
-    color:beige;
-    display: flex;
-    text-align: justify;
-    text-indent: 50px;
- 
-}
-
-.right-col {
-    text-align: right;
-    margin: 200px;
-}
-h1
-{
-    font-family: 'Comfortaa', cursive;
-    text-align: right;
-    padding-top: 50px;
-    padding-bottom: 0px;
-    line-height: 300px;
-    margin: 130px;
-    color: beige;
-    margin: 200px;
-    font-size: 2vw;
-}
-
-.text-box
-{
-    font-size: 8vw;
-    font-weight: 900;
-    text-align: center;
-    width: 100%;
-    position: -webkit-sticky;
-    position: sticky;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.fixed-text
-{
-    display: inline-block;
+h1 {
+    border-bottom: 2px solid black;
     
-}
-
-.animated-text
-{
-    display: inline-block;
-}
-
-.animated-text span
-{
-    position: relative;
-    color: beige;
-    display: block;
-    padding-top: 200px;
-    line-height: 400px;
-    font-family: 'Comfortaa', cursive;
-}
-
-.animated-text span::after
-{
-    content: "";
-    position: absolute;
-    left: 0;
-    height: 60%;
-    width: 70%;
-    border-left: 2px solid beige;
-    right: -2px;
-    background-color: black;
-    animation: 3s texttype;
-    animation-iteration-count: infinite;
-    animation-timing-function: steps(13);
-    animation-fill-mode: backwards;
-}
-
-@keyframes texttype
-{
-    0%{
-        left: 0;
-    }
-    50%{
-        left: 100%;
-    }
-    0%{
-        left: 100%;
-    }
-}
-
-h4 {
-    font-size: 50pt;
-    color: beige;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-#icon
-{
-    width: 60px;
-    cursor: pointer;
-    align-self: right;
-    margin-top: 0;
-}
-
-.container {
-    display: flex;
-    -webkit-display: box;
-    -moz-display: box;
-    -ms-display: flexbox;
-    -webkit-display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    padding: 6%;
-    margin: 0;
   }
-  
- 
-.popup .popup-content {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
- 
-.popup .popup-button {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 1em;
-    text-transform: uppercase;
-    color: beige;
-    border-radius: 50%;
+
+h2 {
+    font-size: 60pt;
+    text-align: right;
+    margin-top: 30%;
+    margin-right: 5%;
+    margin-bottom: 50%;
+}
+
+  .flex-container > div {
+    background-color: #f1f1f1;
+    border: 3px solid black;
+    width: 100%;
+    height: 70%;
     margin: 10px;
-    padding: 1em 3em;
-    background-size: 300% 300%;
-    color: beige;
-    height: 200px;
-    width: 200px;
-    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-  
-   
-    transition: 0.5s;
+    margin-top: 0px;
+    text-align: right;
+    padding-right: 10%;
+    line-height: 400px;
+    font-size: 30px;
   }
-  
-  .popup .popup-button:hover {
-    background-position: right center;
-    padding-top: 0px;
-    margin-top: 10px;
-  }
-  
-  #btn-2 {
-      background-image: repeating-linear-gradient(-45deg, 
-       #bf1919 10px 30px,
-        #cba053 30px 50px,
-        #dcdcdc 50px 70px,
-        #f03a6d 70px 90px,
-        #e5fc75 90px 110px,
-        #3b74f6 110px 130px,
-        #a5c4ee 130px 150px,
-        #fef55e 150px 170px,
-        #8b80c3 170px 190px,
-        #ffd2c1 190px 210px
-    );
-    color: beige;
-    font-family: 'Comfortaa', cursive;
-    font-weight: bold 700;
-   
-  }
-  
-  #btn-2:hover {
-    background-position: 20% center;
-  }
-  
- h3 {
-     position: sticky;
-     font-family: 'Comfortaa', cursive;
-     text-align: right;
-     padding-top: 50px;
-     padding-bottom: 30px;
-     line-height: 300px;
-     margin: 150px;
-     color: beige;
-     margin: 200px;
-    font-size: 1.5vw;
- }
 
- @media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    /* [class*="sticky"] {
-        width: 100%;
-      }
-      [class*="text-box"] {
-        width: 60%;
-      }
-      [class*="animated-text"] {
-        width: 60%;
-      }
-    [class*="right-col"] {
-      width: 100%;
-    }
-    [class*="container"] {
-        width: 100%;
-      }
-      img {
-          
-          height: 50%;
-      } */
-  h1, h3, p, .right-col {
-    margin: 10%;
-  } 
+  footer {
+    font-size: 40pt;
+    text-align: center;
+  }
+
+  /* For mobile phones: */
+footer {
+  width: 60%;
+  text-decoration: center;
+}
+.flex-container div {
+  width: 90%;
+  
+}
+h2 {
+  width: 100%;
 }
