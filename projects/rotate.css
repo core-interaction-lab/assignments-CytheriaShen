@@ -1,0 +1,29 @@
+body {
+    height: 3000px;
+}
+
+.wrapper {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius:  50%;
+    border: 6px solid #0f314c;
+    background-color:  rgb(117, 255, 255);
+    text-align: center;
+    float: right;
+    margin-right: 0;
+    padding-right: 0;
+    display: table-cell;
+}
+
+#reload {
+    width: 200px;
+    height: 200px;
+}
+

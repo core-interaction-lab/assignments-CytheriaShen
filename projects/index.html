@@ -4,40 +4,137 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Front Page</title>
+    <title>Art as a Verb</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Quicksand:wght@300&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Quicksand:wght@300&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Quicksand:wght@300&display=swap" rel="stylesheet">
-    
 </head>
 <body>
+    <marquee behavior="scroll" direction="left">Art as a Verb Art as a Verb Art as a Verb Art as a Verb Art as a Verb Art as a Verb</marquee>
 
-  
+    <div id="container">
+        <span id="text1"></span>
+        <span id="text2"></span>
+    </div>
+    
+    <svg id="filters">
+        <defs>
+            <filter id="threshold">
+                <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                      0 1 0 0 0
+                      0 0 1 0 0
+                      0 0 0 255 -140" />
+            </filter>
+        </defs>
+    </svg>
 
-    <h1>Menu</h1>
-
-    <h2> This Will Be Title</h2>
-
-    <div class="flex-container">
-        <div>Section One</div>
-        <div>Section Two</div>
-        <div>Section Three</div>
-        <div>Section Four</div>  
+    <div class="snows"> 
+        <img src="square-01.png"> 
+        <img src="square-02.png"> 
+        <img src="square-03.png"> 
+        <img src="square-04.png"> 
+        <img src="square-05.png"> 
+        <img src="square-06.png"> 
+        <img src="square-02.png"> 
+        <img src="square-01.png"> 
+        <img src="square-04.png"> 
+        <img src="square-03.png"> 
+        <img src="square-05.png"> 
+        <img src="square-06.png"> 
+        <img src="square-01.png">  
+        <img src="square-03.png"> 
+      
       </div>
 
-      <footer>
-        <p>This is a question?</p>
-        <p>This is the answer</p>
       
-        <a href="mailto:hege@example.com">A Icon To Next Page</a>
-      </footer>
-      
+		
+		<style type="text/css">
+			* {
+				margin: 100;
+				padding: 100;
+			}
+			.box {
+				width: 100vw;
+				height: 100vh;
+				/* 我习惯加个box,宽高满屏，100vw,100vh，就是占满宽高的意思 */
+				background: #ffd7c9;
+				color: #ffd7c9;
+				font-size: 28px;
+                text-align: justify;
+                font-family: "Raleway", sans-serif;
+                line-height: 40px;
+				
+				/* 不论文字属不属于一个单词到头都要换行 */
+				box-sizing: border-box;
+				/* position: relative; */
+				overflow-y: auto;
+				cursor: crosshair;
+               margin-top: 600px;
+                padding-left: 250px;
+                padding-right: 250px;
+			}
+			.box p{
+				position: relative;
+				z-index: 1;
+				/* z-index只与position存在时有效，需要展示的内容要在鼠标白块上方 */
+			}
+			.mouse {
+				position: fixed;
+				left: 0;
+				top: 0;
+				/* 只存在屏幕上，故设置fixed定位 */
+				width: 700px;
+				height: 700px;
+				border-radius: 400px;
+				/* 宽高形状 */
+				background: url(6744/img/cursor.png) no-repeat;
+				background-size: cover;
+				opacity: 5;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<p>
+				In their 1988 exhibition Art as Verb, curators Lowery Stokes Sims and Leslie-King Hammond wrote that
+                 artists “moved the art ‘object’ from a static state . . . to explore kinetic properties related to the human 
+                 experience.” The artists in that exhibition—many of whom have work on view in this gallery—used unconventional
+                  and tactile materials to highlight everyday actions, anchor bodily presence, and expand their work into installations.
+			</p>
+		</div>
+		<div class="mouse"></div>
+		<script type="text/javascript">
+		// 获得鼠标白块
+			var mouse = document.querySelector('.mouse');
+			// 监听鼠标移入页面，展示白块，即透明度设为1
+			document.onmouseenter = function(){
+				mouse.style.opacity = 1;
+			}
+			// 监听鼠标移动，
+			document.onmousemove = function(event) {
+				// 获取当前鼠标于浏览器的x,y轴位置
+				var x = event.clientX;
+				var y = event.clientY;
+				// 使白块位于鼠标正中心，故需要减去宽高的一半
+				mouse.style.left = x - 200 + 'px';
+				mouse.style.top = y - 200 + 'px';
+			}
+			// 监听鼠标移入页面，隐藏白块，即透明度设为0
+			document.onmouseleave = function(){
+				mouse.style.opacity = 0;
+			}
+		</script>
+
+     <div class="wrapper">
+        <div class="circle">
+            <img id="reload" src="Billborad Design-05.png" alt="scroll">
+        </div>
+</div>
+
+
+
+    <script src="main.js"></script>
 </body>
 </html>
