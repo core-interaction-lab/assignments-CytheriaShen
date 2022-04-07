@@ -1,43 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Comfortaa:wght@300;400;500;600;700&family=Parisienne&family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Comfortaa:wght@300;400;500;600;700&family=Damion&family=Parisienne&family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Comfortaa:wght@300;400;500;600;700&family=Damion&family=Dancing+Script&family=Parisienne&family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Comfortaa:wght@300;400;500;600;700&family=Damion&family=Dancing+Script&family=Parisienne&family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Comfortaa:wght@300;400;500;600;700&family=Damion&family=Dancing+Script&family=Parisienne&family=Prata&family=Quicksand:wght@300&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 h1 {
-    border-bottom: 2px solid black;
+  border-bottom: 2px solid black ;
+  margin-bottom: 400px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 16pt;
+  margin-top: 10px;
+  font-family: 'Prata', serif;
+}
+
+h2 {
+  font-size: 40pt;
+  font-family: 'Parisienne', cursive;
+  font-weight: regular 400;
+
+
+  margin-bottom: 300px;
+  text-align: right;
+  margin-right: 20px;
+ 
+  
+}
+
+img {
+  width: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.cake-1 {
+  position: sticky;
+  top: 15;
+  }
+  
+  .cake-2 {
+    position: sticky;
+    top: 2rem;
+  }
+  
+  .cake-3 {
+    position: sticky;
+    bottom: 2rem;
     
   }
 
-h2 {
-    font-size: 60pt;
-    text-align: right;
-    margin-top: 30%;
-    margin-right: 5%;
-    margin-bottom: 50%;
-}
-
-  .flex-container > div {
-    background-color: #f1f1f1;
-    border: 3px solid black;
-    width: 100%;
-    height: 70%;
-    margin: 10px;
-    margin-top: 0px;
-    text-align: right;
-    padding-right: 10%;
-    line-height: 400px;
-    font-size: 30px;
+  .cake-4 {
+    position: sticky;
+    top: 0rem;
+    
   }
 
-  footer {
-    font-size: 40pt;
-    text-align: center;
-  }
-
-  /* For mobile phones: */
-footer {
-  width: 60%;
-  text-decoration: center;
+#speciality {
+  display:block;
+  height:200px;
+  width:40%; 
+ 
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  font-size: 20pt;
+  text-align: right;
+  padding-bottom: 0;
+  font-family: 'Prata', serif;
+  background: #7f3e4f;
+  color: white;
 }
-.flex-container div {
-  width: 90%;
+
+#location {
+  display:block;
+  height:300px;
+  width:60%; 
+  
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  font-size: 20pt;
+  text-align: right;
+  font-family: 'Prata', serif;
+  background: #bbbd74;
+  color: white;
   
 }
-h2 {
-  width: 100%;
+
+#style {
+  display:block;
+  height:400px;
+  width:80%; 
+  
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  font-size: 20pt;
+  text-align: right;
+  font-family: 'Prata', serif;
+  color: white;
+  background: #123555;
 }
+
+#cost {
+  display:block;
+  height:500px;
+  width:100%; 
+  
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  font-size: 20pt;
+  text-align: right;
+  font-family: 'Prata', serif;
+  color: white;
+  background: black;
+}
+
+.btnStack {
+  font-family: 'Prata', serif;
+ 
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  margin-bottom: 400px;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  border: 2px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+a.btnStack:hover {
+  background-color: gainsboro;
+}
+
