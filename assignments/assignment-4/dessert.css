@@ -1,0 +1,26 @@
+
+body {
+    background-color: rgb(181, 128, 86);
+  
+}
+
+h1 {
+    color: aqua;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#prev {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 50px;
+    background-color: aqua;
+    width: 100px;
+    height: 60px;
+}
+
+#next {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 50px;
+    background-color: aqua;
+    width: 100px;
+    height: 60px;
+
+}
