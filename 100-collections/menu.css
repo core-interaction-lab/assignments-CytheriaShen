@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Comfortaa:wght@300;400;500;600;700&family=Parisienne&family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Comfortaa:wght@300;400;500;600;700&family=Damion&family=Parisienne&family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Comfortaa:wght@300;400;500;600;700&family=Damion&family=Dancing+Script&family=Parisienne&family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Comfortaa:wght@300;400;500;600;700&family=Damion&family=Dancing+Script&family=Parisienne&family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Comfortaa:wght@300;400;500;600;700&family=Damion&family=Dancing+Script&family=Parisienne&family=Prata&family=Quicksand:wght@300&display=swap');
+
+.plates-button {
+    display: inline-block;
+}
+
+.plates-button a {
+    text-decoration: none;
+}
+
+#one:hover {
+    width: 200px;
+}
+
+#two .item:hover img.plates-02.png {
+
+    width: 200px;
+    transform: scale(1.4);
+	z-index: 2;
+
+}
+#three:hover {
+    width: 200px;
+}

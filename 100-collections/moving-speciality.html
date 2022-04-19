@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Speciality</title>
+    <link rel="stylesheet" type="text/css" href="moving-speciality.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <script src="moving-speciality.js"></script>
+</head>
+<body>
+    <div class="container">
+		<div class="title">
+			<ul>
+			    <a href="test-2.html" id="" style="text-decoration:none; color:beige; display:inline-block;font-size: 14pt; font-family: 'Prata', serif;">
+			        <h4>Menu</h4>
+				</a>
+			</ul>
+			<ul>
+			    <a href="index.html" id="index" style="text-decoration:none; color:beige;display:inline-block; font-size: 16pt; text-align: center; font-family:'Parisienne', cursive;margin-left: auto; margin-right:auto;">
+					<h4>100 Dessert Specialities In New York</h4>
+				</a>
+			</ul>
+			<span id="btn">Start</span>
+		</div>
+
+		
+	</div>
+	<div class="conn">
+		<div id="content"></div>
+		<a href="airtable.html" id="detail" style="text-decoration:none;font-size: 14pt; text-align: center; 
+		font-family:'Prata', cursive;margin-left: auto; margin-right:auto; border-radius: 2px; line-height: 40px;">More Speciality</a>
+	
+	</div>
+
+
+	<script type="text/javascript ">
+		const list = getData();
+		let btn = document.getElementById("btn")
+		let content = document.getElementById("content"); 
+		let detail = document.getElementById("detail");
+		let srcIndex = 0;   
+		let bottomIndex = [], rightIndex = [];
+		for (let j = 0; j < list.length; j++) {
+			createData(list[j], srcIndex)
+			if (srcIndex >= 6) srcIndex = 0;
+			srcIndex++;
+			bottomIndex.push(0)
+			rightIndex.push(0)
+		}
+
+		let contentGo = document.querySelectorAll(".content-go");
+		let timer = [], flag = true;
+		
+		btn.onclick = function() {
+			if(btn.innerHTML == 'Start') {
+				setIntervalFun()
+			} else if(btn.innerHTML == 'Stop') {
+				clearIntervalFun()
+			}
+		}
+		
+		detail.onclick = function() {
+			window.location.href = "airtable.html?id=all"
+		}
+		
+		for(let i = 0; i <contentGo.length; i++) {
+			contentGo[i].onmouseleave = function () {
+				throttle(setIntervalFun(), 2000)
+			}
+			contentGo[i].onmouseenter = function () {
+				throttle(clearIntervalFun(), 2000)
+			}
+		}
+
+
+		function setIntervalFun() {
+			if (flag) {
+				for (let i = 0; i < contentGo.length; i++) {
+					bottomIndex[i] = bottomIndex[i] ? bottomIndex[i] : -(i * 300);
+					const a = setInterval(function () {
+						contentGo[i].style.display = "block";
+						if (bottomIndex[i] < 600 && rightIndex[i] == 0) {
+							bottomIndex[i]++;
+							contentGo[i].style.bottom = bottomIndex[i] + "px";
+						}
+						if (bottomIndex[i] == 600 && rightIndex[i] < 1200) {
+							rightIndex[i]++;
+							contentGo[i].style.right = rightIndex[i] + "px";
+						}
+						if (bottomIndex[i] <= 600 && rightIndex[i] == 1200) {
+							bottomIndex[i]--;
+							contentGo[i].style.bottom = bottomIndex[i] + "px";
+						}
+						if (bottomIndex[i] <= 0 && rightIndex[i] > 0) {
+							rightIndex[i]--;
+							contentGo[i].style.right = rightIndex[i] + "px";
+							if (rightIndex[i] == 0) {
+								bottomIndex[i] = 0;
+								rightIndex[i] = 0;
+								contentGo[i].style.bottom = bottomIndex[i] + "px";
+								contentGo[i].style.right = rightIndex[i] + "px";
+							}
+						}
+					}, 10)
+					timer.push(a)
+				}
+				btn.innerHTML = "Stop";
+			}
+			flag = false;
+		}
+
+		function clearIntervalFun() {
+			if (!flag) {
+				timer.forEach(v => {
+					clearInterval(v)
+				})
+				btn.innerHTML = "Start";
+			}
+			flag = true
+		}
+
+		function createData(list, srcIndex) {
+			var contentGo = document.createElement("div");
+			contentGo.classList.add("content-go");
+			var item = document.createElement("div");
+			item.classList.add("item");
+			var itemContent = document.createElement("div");
+			itemContent.classList.add("item-content");
+			var plants = document.createElement("img");
+			plants.src = "images/plates/plates-" + srcIndex + ".png";
+			plants.classList.add("plants");
+			var specialityPic = document.createElement("img");
+			specialityPic.src = list.src;
+			specialityPic.classList.add("speciality_pic");
+			var desc = document.createElement("div");
+			desc.classList.add("desc");
+			var p1 = document.createElement("p");
+			p1.innerHTML = list.name;
+			var p2 = document.createElement("p");
+			p2.innerHTML = list.speciality;
+			var button = document.createElement("button");
+			button.classList.add("button_link");
+			button.innerHTML = "More Speciality";
+			button.onclick = function() {
+				if(list.children.length > 0) {
+					window.location.href = "airtable.html?id="+list.id
+				} else {
+					clearIntervalFun()
+					alert("No Classification")
+				}
+			}
+			itemContent.appendChild(plants)
+			itemContent.appendChild(specialityPic)
+			desc.appendChild(p1)
+			desc.appendChild(p2)
+			desc.appendChild(button)
+			itemContent.appendChild(desc)
+			item.appendChild(itemContent)
+			contentGo.appendChild(item);
+			content.appendChild(contentGo)
+		}
+
+	
+		function throttle(func, delay) {
+			let run = true
+			return function () {
+				if (!run) return
+				run = false
+				setTimeout(() => {
+					func.apply(this, arguments)
+					run = true
+				}, delay)
+			}
+		}
+	</script>
+    
+</body>
+</html>

@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Comfortaa:wght@300;400;500;600;700&family=Parisienne&family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Comfortaa:wght@300;400;500;600;700&family=Damion&family=Parisienne&family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Comfortaa:wght@300;400;500;600;700&family=Damion&family=Dancing+Script&family=Parisienne&family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Comfortaa:wght@300;400;500;600;700&family=Damion&family=Dancing+Script&family=Parisienne&family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Comfortaa:wght@300;400;500;600;700&family=Damion&family=Dancing+Script&family=Parisienne&family=Prata&family=Quicksand:wght@300&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+  background-color: beige;
+}
+
+
+
+img {
+  width: 700px;
+  float: left;
+  padding-left: 0;
+  margin-left: 0;
+  
+}
+
+h1 {
+  padding-top: 30%;
+  font-family: 'Parisienne', cursive;
+  color: rgba(175, 128, 73, 0.797);
+  margin-right: 50px;
+  font-size: 28pt;
+
+
+}
+
+h2 {
+  font-family: 'Prata', serif;
+  font-weight: bold;
+  color:  rgba(175, 128, 73, 0.797);
+  margin-right: 50px;
+  margin-top: 130px;
+  font-size: 12pt;
+  line-height: 32px;
+  text-align: justify;
+  margin-bottom: 150px;
+
+}
+
+.container {
+  
+  font-family: 'Prata', serif;
+  color:  rgba(175, 128, 73, 0.797);
+  
+  font-size: 12pt;
+  line-height: 36px;
+
+}
+
+#design {
+  font-weight: bold;
+  margin-right: 50px;
+  font-family: 'Prata', serif;
+  color:  rgba(175, 128, 73, 0.797);
+  text-align: right;
+  
+}
+
+#collect {
+  margin-right: 50px;
+  font-weight: bold;
+  text-align: right;
+  font-family: 'Prata', serif;
+  color:  rgba(175, 128, 73, 0.797);
+}
+
+
+
+a.btnStack:hover {
+  color: rgb(20, 228, 255);
+  
+}
+
