@@ -87,7 +87,7 @@ a.btnStack:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 0 4px 0;
+  padding: 15px 0 4px 15px;
   border-bottom: 1px solid beige;
   position: absolute;
   left: 50%;

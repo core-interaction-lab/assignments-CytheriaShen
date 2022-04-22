@@ -57,7 +57,7 @@ const buildSlide = (movie) => {
   const movieContainer = document.createElement('article');
   if (movie.fields.photo) {
       const plantsImg = document.createElement('img');
-      plantsImg.src = "./images/plates-" + Math.floor(Math.random() * 6) + ".png";
+      plantsImg.src = "./images/plates-" + Math.floor(Math.random() * 1) + ".png";
       plantsImg.classList.add('plants-img');
       movieContainer.append(plantsImg);
       const photoImg = document.createElement('img');
