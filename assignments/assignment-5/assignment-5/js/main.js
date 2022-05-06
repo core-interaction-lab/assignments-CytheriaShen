@@ -12,18 +12,16 @@ const prevButton = document.getElementById('prev');
 const nextButton = document.getElementById('next');
 
 const fetchMovies = async () => {
-    // const response = await fetch(airtableUrl).then(data => data.json());
-    const response = await fetch("https://interactionlab.space/data/assignment-4-1.json").then(data => data.json());
-    buildSlideshow(response.items);
+    const response = await fetch(airtableUrl).then(data => data.json());
+    buildSlideshow(response.records);
     return response.records;
 };
-
 
 const buildSlideshow = (movies) => {
     let leftI = 0;
     let rightI = 6;
 
-    const articles = movies.slice(0, 9).map(buildSlide);
+    const articles = movies.slice(0, 7).map(buildSlide);
     slideshowContainer.append(...articles);
 
     prevButton.addEventListener('click', () => {
@@ -53,30 +51,61 @@ const buildSlideshow = (movies) => {
     });
 };
 
+const articleDom = document.getElementsByTagName("article");
+    for (let i = 0; i < articleDom.length; i++) {
+        articleDom[i].addEventListener("mouseenter", ()=> {
+            articleDom[i].children[0].style.transform = "scale(1.2)";
+            articleDom[i].children[0].style.transition = "all 0.5s";
+        })
+
+        articleDom[i].addEventListener("mouseleave", ()=> {
+            articleDom[i].children[0].style.transform = "scale(1)";
+            articleDom[i].children[0].style.transition = "all 0.5s";
+        })
+    }
+
 const buildSlide = (movie) => {
-    console.log(movie)
     const movieContainer = document.createElement('article');
-    if (movie.images) {
-        // console.log(movie.fields.poster[0].url);
+    if (movie.fields.photo) {
         const posterImg = document.createElement('img');
-        posterImg.src = movie.images[0].url;
+        posterImg.src = movie.fields.photo[0].url;
         posterImg.classList.add('poster-img', 'dlkjfdl');
         posterImg.id = 'poster-img-id';
         movieContainer.append(posterImg);
     }
 
-
-    if (movie.name) {
-        const descriptionEl1 = document.createElement('p');
-        descriptionEl1.innerHTML = movie.name;
-        descriptionEl1.classList.add('movie-description1');
-        movieContainer.append(descriptionEl1);
+    if (movie.fields.Name) {
+        const descriptionEl = document.createElement('p');
+        descriptionEl.innerHTML = movie.fields.Name;
+        descriptionEl.classList.add('name');
+        movieContainer.append(descriptionEl);
     }
 
-    if (movie.release_date) {
+    if (movie.fields.speciality) {
         const descriptionEl = document.createElement('p');
-        descriptionEl.innerHTML = movie.release_date;
-        descriptionEl.classList.add('movie-description');
+        descriptionEl.innerHTML = movie.fields.speciality;
+        descriptionEl.classList.add('speciality');
+        movieContainer.append(descriptionEl);
+    }
+
+    if (movie.fields.location) {
+        const descriptionEl = document.createElement('p');
+        descriptionEl.innerHTML = movie.fields.location;
+        descriptionEl.classList.add('location');
+        movieContainer.append(descriptionEl);
+    }
+
+    if (movie.fields.style) {
+        const descriptionEl = document.createElement('p');
+        descriptionEl.innerHTML = movie.fields.style;
+        descriptionEl.classList.add('style');
+        movieContainer.append(descriptionEl);
+    }
+
+    if (movie.fields["cost (average)"]) {
+        const descriptionEl = document.createElement('p');
+        descriptionEl.innerHTML = movie.fields["cost (average)"];
+        descriptionEl.classList.add('cost');
         movieContainer.append(descriptionEl);
     }
     return movieContainer;
