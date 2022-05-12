@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Fly Your Dream</title>
+</head>
+<body>
+
+	  
+	<div class="container">
+		<h1 class="title">Fly Your Dream</h1>
+		<div class="lanternContainer" id="lanternContainer"></div>
+		
+	
+
+		<div class="dream">
+			<div class="dream-center">
+				<div class="dream-width">
+					<img src="image/sky latern-02.png" class="img1" id="bigImage" alt="">
+				</div>
+				<div class="dream-fly">
+					<div id="fly"></div>
+				</div>
+			</div>
+			<div class="dream-form">
+				<textarea maxlength="108" id="content"></textarea>
+				<button class="btn" id="send"></button>
+			</div>
+			
+		</div>
+	</div>
+
+
+		<div class="gradient"></div>
+	
+		<audio autoplay="" loop="" src="">
+			
+		</audio>
+	<script>
+		window.onload = function() {
+			lights();
+		}
+
+		let bigImage = document.getElementById("bigImage");
+		let content = document.getElementById("content");
+		let send = document.getElementById("send");
+		let fly = document.getElementById("fly");
+		let lanternContainer = document.getElementById("lanternContainer");
+		let reg = /(?:^|(\s))dream|Dream|Wish|wish|Love|love|Hope|hope|True|ture|Happy|happy(?:$|\s)/;
+
+		send.onclick = function () {
+			fly.innerHTML = "";
+			let contentVal = content.value;
+			if (contentVal.length == 0) {
+				alert("Please enter Before you can send");
+				return;
+			} else {
+				if (fly.getAttribute("style") !== null) {
+					alert("You dream comes true! Refresh to fly another dream.");
+					return;
+				}
+				let _imgs = document.createElement("img");
+				_imgs.classList.add("img1");
+				_imgs.src = "image/sky latern-02.png";
+				let _divs = document.createElement("div");
+				_divs.classList.add("dream-text");
+				let _p = document.createElement("p");
+				_p.setAttribute("id", "contentShow");
+				_p.innerHTML = contentVal;
+				_divs.appendChild(_p);
+				fly.appendChild(_imgs);
+				fly.appendChild(_divs);
+				fly.style.animationName = "lanternFly";
+				fly.style.animationTimingFunction = "linear";
+				fly.style.animationIterationCount = 1;
+				if (reg.test(contentVal)) {
+					fly.style.animationDuration = "4s";
+				} else {
+					fly.style.animationDuration = "12s";
+				}
+				content.value = "";
+				bigImage.style.opacity = "0";
+				setTimeout(function () {
+					fly.innerHTML = "";
+					fly.removeAttribute("style");
+					bigImage.style.opacity = "1";
+				}, reg.test(contentVal) ? 4500 : 7000)
+			}
+		}
+
+		function lights() {
+			if (lanternContainer.innerHTML.length > 0) return;
+			lightCreate();
+			setTimeout(() => {
+				lightCreate()
+			}, 1500)
+			setTimeout(() => {
+				lightCreate()
+			}, 3000)
+			console.log()
+		}
+
+		function lightCreate() {
+			for (let light = 1; light <= 18; light++) {
+				let _div = document.createElement("div");
+				_div.classList.add(`lanternX${light}`);
+				_div.style.left = `${6 * light}%`;
+				let _img = document.createElement("img");
+				_img.classList.add(`lanternY${light}`);
+				let wid = Math.round(Math.random() * (100 - 1) + 1);
+				_img.style.width = `${wid}px`;
+				_img.style.animationDuration = `${Math.round(Math.random() * 5 + 5)}s`;
+				if (wid <= 25) {
+					_img.style.animationName = "lanternY4";
+					_img.style.zIndex = 5;
+				} else if (wid <= 50) {
+					
+					_img.style.animationName = "lanternY3";
+				} else if (wid <= 75) {
+					_img.style.animationName = "lanternY2";
+				
+				} else {
+					_img.style.animationName = "lanternY1";
+				}
+				_img.src = "image/sky latern-04.png";
+				_div.appendChild(_img);
+				lanternContainer.appendChild(_div);
+			}
+		}
+
+	</script>
+</body>
+
+</html>
