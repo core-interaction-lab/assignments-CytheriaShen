@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Comfortaa:wght@300;400;500;600;700&family=Damion&family=Dancing+Script&family=Great+Vibes&family=Indie+Flower&family=Merienda&family=Parisienne&family=Paytone+One&family=Prata&family=Quicksand:wght@300&family=Rubik+Glitch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Berkshire+Swash&family=Comfortaa:wght@300;400;500;600;700&family=Damion&family=Dancing+Script&family=Great+Vibes&family=Indie+Flower&family=Merienda&family=Parisienne&family=Paytone+One&family=Prata&family=Quicksand:wght@300&family=Rubik+Glitch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Berkshire+Swash&family=Comfortaa:wght@300;400;500;600;700&family=Damion&family=Dancing+Script&family=Great+Vibes&family=Homemade+Apple&family=Indie+Flower&family=Merienda&family=Parisienne&family=Paytone+One&family=Prata&family=Quicksand:wght@300&family=Rubik+Glitch&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-image: linear-gradient(to right, #1b3632 , #0079cf);
+  }
+  
+  .container {
+      width: 1400px;
+      margin: 0px auto;
+      padding: 15px 90px;
+      overflow: hidden;
+      top: 0ch;
+      position: -webkit-sticky;
+      position: -moz-sticky;
+      position: sticky;
+       z-index: 1;
+  
+  }
+  
+  .title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 0px;
+   
+  }
+  h4 {
+    color: #ffffb3;
+    font-size: 30pt;
+  }
+
+  h4:hover {
+    color: orange;
+  }
+  
+    
+  
+    
+  
+    h1 {
+      margin-top: 100px;
+      color: #ffffb3;
+      font-family: 'Indie Flower', cursive;
+      max-width: 130ch;
+     
+  
+      font-size: 16pt;
+      margin-bottom: 40px;
+      margin-right: auto;
+      margin-left: auto;
+      text-align: left;
+      text-align: justify;
+      text-justify:distribute-all-lines;
+ 
+  
+    }
+   
+  
+    h2 {
+        font-size: 60pt;
+        text-align: center;
+    }
+
+.dl {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 86%;
+	margin: 10vh auto 0;
+}
+.dl .dl-row {
+	width: 25%;
+	position: relative;
+}
+.dl .dl-row img {
+	width: 100%;
+}
+.dl .dl-row span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 18px;
+	color:  #1b3632;
+	display: none;
+  font-size: 20pt;
+  font-family: 'Berkshire Swash', cursive;
+}
+.dl .dl-row:hover span {
+	display: block;
+}

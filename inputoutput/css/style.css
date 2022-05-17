@@ -21,13 +21,16 @@ body {
   background-image: linear-gradient(to right, #f0ff9c , #ff8e47);
   opacity: 30%;
   height: 150%;
- 
-
-
-
-  
-
-
+}
+.about {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  font-size: 20pt;
+  color: #ffffb3;
+  text-decoration: none;
+  font-family: 'Indie Flower', cursive;
+  z-index: 1;
 }
 .title {
 	text-align: center;
@@ -42,7 +45,7 @@ body {
   width: 100%;
   filter: brightness(120%);
    filter: contrast(120%);
-   filter: drop-shadow(10px 10px 10px black);
+   filter: drop-shadow(10px 10px 10px #1b3632);
  
   
    transform: translate(-50%,0);
@@ -168,6 +171,16 @@ body {
   z-index: 1;
  
 }
+.dream-form .btn#refresh {
+  left: -60px;
+  background: url("../image/refresh.png") center center no-repeat;
+  background-size: 100% 100%;
+	width: 115px;
+	height: 95px;
+	cursor: pointer;
+  z-index: 1;
+ 
+}
 .dream-form .btn:hover {
   animation: shakeX 4s linear infinite;
 }
@@ -270,5 +283,24 @@ body {
   100% {
     width: 10px;
     transform: translateY(-1600px);
+  }
+}
+
+
+@keyframes opc {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
   }
 }

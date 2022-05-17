@@ -6,14 +6,15 @@
 	<link rel="stylesheet" href="css/style.css">
 	<title>Fly Your Dream</title>
 </head>
+
 <body>
 
-	  
+
 	<div class="container">
 		<h1 class="title">Fly Your Dream</h1>
 		<div class="lanternContainer" id="lanternContainer"></div>
-		
-	
+
+
 
 		<div class="dream">
 			<div class="dream-center">
@@ -25,22 +26,24 @@
 				</div>
 			</div>
 			<div class="dream-form">
+				<button class="btn" id="refresh"></button>
 				<textarea maxlength="108" id="content"></textarea>
 				<button class="btn" id="send"></button>
 			</div>
-			
+
 		</div>
+		<a href="about.html" class="about">About</a>
 	</div>
 
 
-		<div class="gradient"></div>
-	
-		<audio autoplay="" loop="" src="">
-			
-		</audio>
+	<div class="gradient"></div>
+
+	<audio autoplay="" loop="" src="">
+
+	</audio>
 	<script>
-		window.onload = function() {
-			lights();
+		window.onload = function () {
+			 lights();
 		}
 
 		let bigImage = document.getElementById("bigImage");
@@ -49,10 +52,20 @@
 		let fly = document.getElementById("fly");
 		let lanternContainer = document.getElementById("lanternContainer");
 		let reg = /(?:^|(\s))dream|Dream|Wish|wish|Love|love|Hope|hope|True|ture|Happy|happy(?:$|\s)/;
+		let lightList = [
+			{ "imgs": "image/sky latern-11.png", "keyword": ["Love", "love", "Loves", "lloves", "Loving", "loving", "Loved", "loved"] },
+			{ "imgs": "image/sky latern-05.png", "keyword": ["Accept", "accept", "Acceptance", "acceptance", "accepted", "Accepted"] },
+			{ "imgs": "image/sky latern-08.png", "keyword": ["Happy", "happy"] },
+			{ "imgs": "image/sky latern-06.png", "keyword": ["peace", "peaceful"] },
+			{ "imgs": "image/sky latern-07.png", "keyword": ["royal", "royality"] },
+			{ "imgs": "image/sky latern-02.png", "keyword": ["lucky", "good luck"] },
+			{ "imgs": "image/sky latern-10.png", "keyword": ["Healthy", "healthy"] },
+			{ "imgs": "image/sky latern-09.png", "keyword": ["Pure", "pure", "purity"] }
+		];
 
 		send.onclick = function () {
 			fly.innerHTML = "";
-			let contentVal = content.value;
+			let contentVal = content.value, isKeyWord = null;
 			if (contentVal.length == 0) {
 				alert("Please enter Before you can send");
 				return;
@@ -61,9 +74,20 @@
 					alert("You dream comes true! Refresh to fly another dream.");
 					return;
 				}
+				let contentValArr = contentVal.split(" ");
+
+				contentValArr.forEach((item, index) => {
+					if (isKeyWord) return;
+					lightList.forEach(v => {
+						v.keyword.map(vk => {
+							if (item == vk) return isKeyWord = v.imgs;
+							if (isKeyWord) return;
+						});
+					})
+				})
 				let _imgs = document.createElement("img");
 				_imgs.classList.add("img1");
-				_imgs.src = "image/sky latern-02.png";
+				_imgs.src = isKeyWord && isKeyWord.length > 0 ? isKeyWord : "image/sky latern-02.png";
 				let _divs = document.createElement("div");
 				_divs.classList.add("dream-text");
 				let _p = document.createElement("p");
@@ -76,20 +100,30 @@
 				fly.style.animationTimingFunction = "linear";
 				fly.style.animationIterationCount = 1;
 				if (reg.test(contentVal)) {
-					fly.style.animationDuration = "4s";
+					fly.style.animationDuration = "16s";
+					bigImage.removeAttribute("style");
 				} else {
 					fly.style.animationDuration = "12s";
+					bigImage.removeAttribute("style");
 				}
 				content.value = "";
 				bigImage.style.opacity = "0";
 				setTimeout(function () {
 					fly.innerHTML = "";
 					fly.removeAttribute("style");
-					bigImage.style.opacity = "1";
+					bigImage.style.animationName = "opc";
+					bigImage.style.animationDuration = '2s';
+					setTimeout(() => {
+						bigImage.removeAttribute("style");
+					}, 2000)
 				}, reg.test(contentVal) ? 4500 : 7000)
 			}
 		}
 
+		refresh.onclick = function() {
+			location.reload();
+		}
+		
 		function lights() {
 			if (lanternContainer.innerHTML.length > 0) return;
 			lightCreate();
@@ -116,11 +150,11 @@
 					_img.style.animationName = "lanternY4";
 					_img.style.zIndex = 5;
 				} else if (wid <= 50) {
-					
+
 					_img.style.animationName = "lanternY3";
 				} else if (wid <= 75) {
 					_img.style.animationName = "lanternY2";
-				
+
 				} else {
 					_img.style.animationName = "lanternY1";
 				}
